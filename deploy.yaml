@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: pedro-finalapp
+  name: pedro-finalapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pedro-finalapp
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: pedro-finalapp
+    spec:
+      containers:
+      - image: pedrofreitas090/pedromobiwebapp:5
+        name: pedromobiwebapp
+        ports:
+        - containerPort: 80
+        resources: {}
+status: {}
